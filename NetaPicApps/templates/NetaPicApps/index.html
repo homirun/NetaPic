@@ -1,9 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>index</title>
-</head>
-<body>
+{% extends "NetaPicApps/base.html" %}
+    {% block content %}
     index template
-</body>
-</html>
+    <form action="{% url 'NetaPicApps:images_dir' %}" method="POST" enctype="multipart/form-data">
+        <input type="file" name="files">
+        <input type="text" name="tags">
+        {% csrf_token %}
+        <input type="submit" name="submit">
+    </form>
+    {% endblock content %}

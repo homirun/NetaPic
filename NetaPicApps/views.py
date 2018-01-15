@@ -16,7 +16,13 @@ def save_images(request):
     return redirect("NetaPicApps:test")
 
 def test_view(request):
+    ImageUrl = []
+    for i in Image.objects.filter(tags = ""):
+        ImageUrl.append(i.image)
     d = {
-        'images': Image.objects.all(),
+        'images':ImageUrl ,
     }
     return render(request, "NetaPicApps/test.html", d)
+
+def remove_images(id):
+    Image.objects.filter(id = id).delete()

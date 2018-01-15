@@ -1,4 +1,17 @@
 {% extends "NetaPicApps/base.html" %}
+{% block head %}
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'NetaPicApps/test.css' %}">
+{% endblock head %}
 {% block content %}
-test
+<section id="search">
+</section>
+<section id="images">
+{% for i in images %}
+<div class="content">
+<img src="../{{ i.url }}" class="image">
+<div class="imageProperty">{{ i.name|slice:"7:-4" }}</div>
+</div>
+{% endfor %}
+</section>
 {% endblock content %}

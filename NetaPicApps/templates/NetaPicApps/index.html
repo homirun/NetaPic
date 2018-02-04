@@ -2,9 +2,9 @@
     {% block content %}
     index template
     <form action="{% url 'NetaPicApps:images_dir' %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
         <input type="file" name="files">
         <input type="text" name="tags">
-        {% csrf_token %}
         <input type="submit" name="submit">
     </form>
     {% endblock content %}

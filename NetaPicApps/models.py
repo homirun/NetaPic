@@ -3,5 +3,8 @@ import uuid
 
 class Image(models.Model):
     uuid = models.UUIDField(primary_key = True, default = uuid.uuid4, editable = False)
-    tags = models.CharField(max_length = 255, )
+    tags = models.CharField(max_length = 255)
     image = models.ImageField(upload_to = "images/")
+
+class SearchImageQuery(models.Model):
+    query = models.CharField(max_length = 255)

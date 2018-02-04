@@ -5,13 +5,19 @@
 {% endblock head %}
 {% block content %}
 <section id="search">
+    <form action="" method="GET">
+        {% csrf_token %}
+        <input type="text" name="tags">
+        <input type="submit" name="submit" value="検索">
+    </form>
 </section>
 <section id="images">
-{% for i in images %}
-<div class="content">
-<img src="../{{ i.url }}" class="image">
-<div class="imageProperty">{{ i.name|slice:"7:-4" }}</div>
-</div>
-{% endfor %}
+    {% for i in images %}
+    <div class="content">
+        <img src="../{{ i.url }}" class="image">
+        <div class="imageProperty">{{ i.name|slice:"7:-4" }}</div>
+        {{ i.tags }}
+    </div>
+    {% endfor %}
 </section>
 {% endblock content %}

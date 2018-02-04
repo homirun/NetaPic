@@ -8,17 +8,21 @@ def index(request):
     return render(request, "NetaPicApps/index.html")
 
 def save_images(request):
-    ImageTags = request.POST.get("tags","")
+    ImageTags = request.POST.get("tags")
     files = request.FILES.getlist("files")
-    ImageHolder = Image(tags = ImageTags)
-    ImageHolder = Image(image = files[0])
+    ImageHolder = Image(image = files[0], tags = ImageTags)
     ImageHolder.save()
     return redirect("NetaPicApps:test")
 
 def test_view(request):
+    SearchKeyword = request.GET.get("tags")
     ImageUrl = []
-    for i in Image.objects.filter(tags = ""):
-        ImageUrl.append(i.image)
+    if SearchKeyword == None or SearchKeyword == "" :
+        for i in Image.objects.all():
+            ImageUrl.append(i.image)
+    else:
+        for i in Image.objects.filter(tags = SearchKeyword):
+            ImageUrl.append(i.image)
     d = {
         'images':ImageUrl ,
     }

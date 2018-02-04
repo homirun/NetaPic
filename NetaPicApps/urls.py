@@ -11,8 +11,7 @@ urlpatterns = [
     url(r'^$', views.index, name = "index"),
     url(r'^images/$', views.save_images, name = "images_dir"),
     url(r'^test/$',views.test_view, name = "test"),
-    url(r'^document/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
-    #url(r'^test/search(?P<keyword>)/$', views.search, name = "image_search"),
+    #url(r'^document/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+#urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

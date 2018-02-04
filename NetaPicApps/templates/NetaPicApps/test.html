@@ -14,9 +14,9 @@
 <section id="images">
     {% for i in images %}
     <div class="content">
-        <img src="../{{ i.url }}" class="image">
-        <div class="imageProperty">{{ i.name|slice:"7:-4" }}</div>
-        {{ i.tags }}
+        <img src="../{{ i.image.url }}" class="image">
+        <div class="imageProperty">{{ i.image.name|slice:"7:-4" }}</div>
+        tags:{{ i.tags }}
     </div>
     {% endfor %}
 </section>

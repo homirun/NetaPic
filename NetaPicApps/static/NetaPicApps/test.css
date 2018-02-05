@@ -28,6 +28,23 @@
     margin: 20px;
 }
 
-#search{
+#search input[type="text"]{
+    vertical-align: middle;
+    border: solid 1px;
+    border-radius: 5px;
+    height: 40px;
+    width: 400px;
+    font-size: 35px;
+    padding: 5px;
+}
+#search input[type="submit"]{
+    vertical-align: middle;
+    height: 50px;
+    width: 70px;
+    border-radius: 5px;
+    padding: 5px;
+}
 
+#search{
+    margin: 10px;
 }

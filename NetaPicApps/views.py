@@ -38,6 +38,7 @@ def test_view(request):
 
     #テンプレートに渡すデータ
     d = {
+        'SearchQuery':SearchKeyword,
         'images':ImageUrl ,
     }
 

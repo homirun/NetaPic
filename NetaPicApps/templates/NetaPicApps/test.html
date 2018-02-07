@@ -5,6 +5,7 @@
 {% endblock head %}
 {% block content %}
 <section id="search">
+    <h1 id="title"><a href="../">NetaPic</a></h1>
     <form action="" method="GET">
         {% csrf_token %}
         <input type="text" name="tags" value="{{ SearchQuery }}">
@@ -16,8 +17,9 @@
     <div class="content">
         <img src="../{{ i.image.url }}" class="image">
         <div class="imageProperty">{{ i.image.name|slice:"7:-4" }}</div>
-        tags:{{ i.tags }}
+        <a href="./?tags={{ i.tags }}"><i class="fas fa-tags"></i>  {{ i.tags }}
     </div>
     {% endfor %}
 </section>
+<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 {% endblock content %}

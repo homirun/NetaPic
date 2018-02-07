@@ -1,3 +1,6 @@
+html,body{
+    color: #003e1f;
+}
 #images .image{
     object-fit: contain;
     width: 300px;
@@ -30,7 +33,7 @@
 
 #search input[type="text"]{
     vertical-align: middle;
-    border: solid 1px;
+    border: solid 2px #003e1f;
     border-radius: 5px;
     height: 40px;
     width: 400px;
@@ -39,12 +42,31 @@
 }
 #search input[type="submit"]{
     vertical-align: middle;
+    border: solid 2px #003e1f;
     height: 50px;
     width: 70px;
     border-radius: 5px;
     padding: 5px;
+    color: #003e1f;
+    background-color: #fff;
+    transition: 0.25s
+}
+
+#search input[type="submit"]:hover{
+    background-color: #003e1f;
+    color: #fff;
+
 }
 
 #search{
     margin: 10px;
+}
+
+#title{
+    display: inline-block;
+}
+
+a{
+    text-decoration: none;
+    color: #003e1f;
 }

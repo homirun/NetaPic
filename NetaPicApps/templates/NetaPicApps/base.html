@@ -2,11 +2,20 @@
 <html>
 <head>
     <title>NetaPic</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'NetaPicApps/base.css' %}">
     {% block head %}
     {{ head }}
     {% endblock %}
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><h1 id="title"><a href="{% url 'NetaPicApps:index' %}">NetaPic</a></h1></li>
+            <li><a href="{% url 'NetaPicApps:index' %}">upload</a></li>
+            <li><a href="{% url 'NetaPicApps:test' %}">library</a></li>
+        </ul>
+    </nav>
     {% block content %}
         {{ content }}
     {% endblock %}

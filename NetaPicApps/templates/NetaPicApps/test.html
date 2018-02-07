@@ -5,7 +5,6 @@
 {% endblock head %}
 {% block content %}
 <section id="search">
-    <h1 id="title"><a href="../">NetaPic</a></h1>
     <form action="" method="GET">
         {% csrf_token %}
         <input type="text" name="tags" value="{{ SearchQuery }}">

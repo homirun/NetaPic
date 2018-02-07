@@ -1,0 +1,28 @@
+html,body{
+    color: #003e1f;
+}
+a{
+    text-decoration: none;
+    color: #003e1f;
+}
+ul{
+    display: flex;
+    list-style: none;
+    background-color: #73ba9b;
+}
+
+li{
+    margin: 15px 20px;
+    font-size: 25px;
+    color: #fff;
+}
+
+li a{
+    color: #fff;
+}
+
+li:first-child {
+    margin: 0;
+    margin-right: auto;
+    font-size: 20px;
+}

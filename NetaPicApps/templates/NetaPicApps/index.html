@@ -1,4 +1,8 @@
 {% extends "NetaPicApps/base.html" %}
+    {% block head %}
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'NetaPicApps/index.css' %}">
+    {% endblock head %}
     {% block content %}
     index template
     <form action="{% url 'NetaPicApps:images_dir' %}" method="POST" enctype="multipart/form-data">

@@ -4,9 +4,12 @@ from django.template import loader
 
 from .models import Image
 
-#index
 def index(request):
     return render(request, "NetaPicApps/index.html")
+
+#upload
+def upload(request):
+    return render(request, "NetaPicApps/upload.html")
 
 #画像保存時
 def save_images(request):
@@ -19,10 +22,10 @@ def save_images(request):
     ImageHolder = Image(image = files[0], tags = ImageTags)
     ImageHolder.save()
 
-    return redirect("NetaPicApps:test")
+    return redirect("NetaPicApps:library")
 
 #画像出力
-def test_view(request):
+def library(request):
 
     #検索タグ
     SearchKeyword = request.GET.get("tags")
@@ -42,7 +45,7 @@ def test_view(request):
         'images':ImageUrl ,
     }
 
-    return render(request, "NetaPicApps/test.html", d)
+    return render(request, "NetaPicApps/library.html", d)
 
 #DBからの画像の削除
 def remove_images(id):

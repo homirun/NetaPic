@@ -9,8 +9,9 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 app_name = 'NetaPicApps'
 urlpatterns = [
     url(r'^$', views.index, name = "index"),
+    url(r'^upload/$',views.upload, name = "upload"),
     url(r'^images/$', views.save_images, name = "images_dir"),
-    url(r'^test/$',views.test_view, name = "test"),
+    url(r'^library/$',views.library, name = "library"),
     #url(r'^document/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

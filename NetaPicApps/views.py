@@ -34,6 +34,7 @@ def library(request):
     #検索タグを用いてDBから画像データの抜き出し
     ImageUrl = []
     if SearchKeyword == None or SearchKeyword == "" :
+        SearchKeyword = ""
         for i in Image.objects.all():
             ImageUrl.append(i)
     else:

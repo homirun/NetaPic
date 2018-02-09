@@ -4,11 +4,11 @@ from django.template import loader
 
 from .models import Image
 
-#index
+#./index
 def index(request):
     return render(request, "NetaPicApps/index.html")
 
-#upload
+#./upload
 def upload(request):
     return render(request, "NetaPicApps/upload.html")
 
@@ -25,7 +25,7 @@ def save_images(request):
 
     return redirect("NetaPicApps:library")
 
-#画像出力
+#./library
 def library(request):
 
     #検索タグ

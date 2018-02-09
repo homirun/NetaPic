@@ -4,10 +4,13 @@
     <link rel="stylesheet" type="text/css" href="{% static 'NetaPicApps/upload.css' %}">
     {% endblock head %}
     {% block content %}
-    <form action="{% url 'NetaPicApps:images_dir' %}" method="POST" enctype="multipart/form-data">
-        {% csrf_token %}
-        <input type="file" name="files">
-        <input type="text" name="tags">
-        <input type="submit" name="submit">
-    </form>
+        <form action="{% url 'NetaPicApps:images_dir' %}" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <label for="file" class="file">
+                <input type="file" name="files" id="file">
+                <div class="imgPic">画像のアップロード</div>
+            </label>
+            <input type="text" name="tags">
+            <input type="submit" name="submit">
+        </form>
     {% endblock content %}

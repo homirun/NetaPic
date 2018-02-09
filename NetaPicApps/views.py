@@ -4,6 +4,7 @@ from django.template import loader
 
 from .models import Image
 
+#index
 def index(request):
     return render(request, "NetaPicApps/index.html")
 

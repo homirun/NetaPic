@@ -1,0 +1,51 @@
+.file input{
+    display:none;
+}
+.file .imgPic{
+    border: solid 2px #003e1f;
+    cursor:pointer;
+    width: 65%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+input[type="text"]{
+    vertical-align: middle;
+    border: solid 2px #003e1f;
+    border-radius: 5px;
+    height: 40px;
+    width: 400px;
+    font-size: 35px;
+    padding: 5px;
+    margin: 10px auto;
+    display: block;
+}
+
+input[type="submit"]{
+    vertical-align: middle;
+    border: solid 2px #003e1f;
+    height: 50px;
+    width: 70px;
+    border-radius: 5px;
+    padding: 5px;
+    color: #003e1f;
+    background-color: #fff;
+    margin: 10px auto;
+    display: block;
+    transition: 0.25s;
+}
+
+input[type="submit"]:hover{
+    background-color: #003e1f;
+    color: #fff;
+}
+
+
+#uploadForm form{
+    width: 600px;
+    margin: 0 auto;
+}

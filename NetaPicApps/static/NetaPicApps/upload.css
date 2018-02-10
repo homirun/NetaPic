@@ -4,7 +4,7 @@
 .file .imgPic{
     border: solid 2px #003e1f;
     cursor:pointer;
-    width: 65%;
+    width: 60%;
     height: 100px;
     display: flex;
     align-items: center;
@@ -12,6 +12,7 @@
     margin: 10px auto;
     border-radius: 5px;
     transition: 0.25s;
+    padding: 5px;
 }
 
 .file .imgPic:hover{
@@ -24,7 +25,7 @@ input[type="text"]{
     border: solid 2px #003e1f;
     border-radius: 5px;
     height: 40px;
-    width: 400px;
+    width: 60%;
     font-size: 35px;
     padding: 5px;
     margin: 10px auto;
@@ -35,7 +36,7 @@ input[type="submit"]{
     vertical-align: middle;
     border: solid 2px #003e1f;
     height: 50px;
-    width: 70px;
+    width: 25%;
     border-radius: 5px;
     padding: 5px;
     color: #003e1f;
